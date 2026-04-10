@@ -476,6 +476,9 @@
 
 
 @media only screen and (min-width:320px) and (max-width: 767px) {
+.header-top {
+  display: none !important;
+}
 .header-top-left {
   width: 110px;
   overflow: hidden;
