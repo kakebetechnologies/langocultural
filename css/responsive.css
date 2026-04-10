@@ -967,13 +967,17 @@
     background: #FEB404;
   }
 
-  /* Improved dropdown collapse area */
+  /* Improved dropdown collapse area - full width */
   .main-menu .collapse {
     background: linear-gradient(180deg, #8B4513 0%, #6B3410 100%);
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     max-height: 450px;
     overflow-y: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
   }
 
   /* Improved dropdown button */
@@ -1004,22 +1008,23 @@
     background: transparent;
   }
 
-  /* Submenu styling */
+  /* Submenu styling - full width */
   .mobile-menu > li > ul,
   .mobile-menu > li > ul > li > ul {
     background: rgba(0,0,0,0.15);
-    margin-left: 15px;
-    border-radius: 5px;
+    margin-left: 0;
+    border-radius: 0;
+    width: 100%;
   }
 
-  /* Improved menu item links */
+  /* Improved menu item links - full width */
   .mobile-menu > li > a,
   .mobile-menu > li > ul > li > a,
   .mobile-menu > li > ul > li > ul > li > a {
-    padding: 14px 20px;
+    padding: 14px 15px;
     color: #ffffff;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 300ms ease 0s;
@@ -1027,6 +1032,10 @@
     line-height: 1.4;
     word-wrap: break-word;
     white-space: normal;
+    width: 100%;
+    display: block;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   /* Hover effect with slide animation */
