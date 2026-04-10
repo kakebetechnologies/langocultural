@@ -202,6 +202,40 @@ li {
     border: 1px solid #0F52BA;
 }
 
+/* Meeting gallery image fit + monochrome direction */
+.gallery-item .img-holder figure {
+    height: 240px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.gallery-item .img-holder figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-widget .gallery .img-holder img {
+    width: 100%;
+    height: 95px;
+    object-fit: cover;
+    display: block;
+}
+
+body {
+    color: #111111;
+    background: #ffffff;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #222222;
+}
+
 
 /*** 
 
@@ -940,6 +974,181 @@ li {
   transform: scaleX(0);
 }
 /* End skills-name styles */
+
+/* LCI Gallery Page Enhancements */
+.lci-gallery-page {
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 65%);
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.lci-gallery-page .gallery-hero-intro {
+    margin-bottom: 35px;
+}
+.lci-gallery-page .gallery-hero-intro h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0c2c52;
+    margin-bottom: 12px;
+}
+.lci-gallery-page .gallery-hero-intro p {
+    max-width: 860px;
+    margin: 0 auto;
+    color: #4b5d73;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+.lci-gallery-page .filter-tabs li {
+    border-radius: 24px;
+    padding: 10px 22px;
+    margin: 6px;
+    background: #eaf2fb;
+    color: #12355b;
+    font-weight: 600;
+    text-transform: none;
+    transition: all .3s ease;
+}
+.lci-gallery-page .filter-tabs li.active,
+.lci-gallery-page .filter-tabs li:hover {
+    background: #0f4c81;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(15, 76, 129, .28);
+}
+.lci-gallery-page .gallery-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 35px rgba(10, 35, 66, .12);
+    margin-bottom: 30px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.lci-gallery-page .gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(10, 35, 66, .18);
+}
+.lci-gallery-page .gallery-card .img-holder figure {
+    margin: 0;
+}
+.lci-gallery-page .gallery-card .img-holder img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+}
+.lci-gallery-page .gallery-card-content {
+    padding: 20px 22px 24px;
+}
+.lci-gallery-page .gallery-card-content h4 {
+    color: #103a61;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.lci-gallery-page .gallery-card-content p {
+    color: #5a6b7e;
+    font-size: 15px;
+    line-height: 1.7em;
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .lci-gallery-page .gallery-hero-intro h3 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 575px) {
+    .lci-gallery-page {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .lci-gallery-page .gallery-hero-intro h3 {
+        font-size: 25px;
+    }
+}
+
+/* History page: Lango Icons gallery */
+.lango-icons-section {
+    background: #f8f5ef;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.lango-icons-grid .col-md-4 {
+    margin-bottom: 30px;
+}
+.lango-icon-card {
+    background: #fff;
+    border: 1px solid #e6dfd2;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(22, 26, 31, 0.10);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.lango-icon-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 34px rgba(22, 26, 31, 0.15);
+}
+.lango-icon-portrait {
+    height: 290px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) contrast(1.07) sepia(0.18);
+}
+.lango-icon-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border: 0;
+    background: #1f3a56;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .2px;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+.lango-readmore-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    transition: transform .25s ease, background .25s ease;
+}
+.lango-icon-card.active .lango-readmore-arrow {
+    transform: rotate(180deg);
+    background: rgba(255, 255, 255, 0.3);
+}
+.lango-icon-trigger:focus {
+    outline: 2px solid #d7b66a;
+    outline-offset: -2px;
+}
+.lango-profile-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .35s ease, opacity .3s ease, padding .3s ease;
+    padding: 0 16px;
+    background: #fffdf8;
+}
+.lango-icon-card.active .lango-profile-detail {
+    max-height: 240px;
+    opacity: 1;
+    padding: 14px 16px 16px;
+}
+.lango-profile-detail h4 {
+    font-size: 19px;
+    color: #2b2b2b;
+    margin: 0 0 10px;
+}
+.lango-profile-detail ul {
+    margin: 0;
+    padding-left: 18px;
+}
+.lango-profile-detail li {
+    margin-bottom: 8px;
+    color: #4b4b4b;
+    line-height: 1.55em;
+}
 
 
 
