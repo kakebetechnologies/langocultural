@@ -1016,14 +1016,17 @@
   .mobile-menu > li > a,
   .mobile-menu > li > ul > li > a,
   .mobile-menu > li > ul > li > ul > li > a {
-    padding: 12px 20px;
+    padding: 14px 20px;
     color: #ffffff;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 300ms ease 0s;
     position: relative;
+    line-height: 1.4;
+    word-wrap: break-word;
+    white-space: normal;
   }
 
   /* Hover effect with slide animation */
@@ -1031,7 +1034,8 @@
   .mobile-menu > li > ul > li > a:hover,
   .mobile-menu > li > ul > li > ul > li > a:hover {
     color: #FEB404;
-    padding-left: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
     background: rgba(255,255,255,0.05);
   }
 
@@ -1042,14 +1046,14 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 3px;
+    width: 4px;
     height: 0;
     background: #FEB404;
     border-radius: 0 3px 3px 0;
     transition: all 0.3s ease;
   }
   .mobile-menu > li > a:hover::before {
-    height: 70%;
+    height: 80%;
   }
 
   /* Active/current menu item */
