@@ -942,3 +942,138 @@
 }
 }
 
+/* ===== IMPROVED MOBILE MENU STYLES ===== */
+@media only screen and (max-width: 767px){
+  /* Better hamburger button styling */
+  .main-menu .navbar-toggle {
+    background: rgba(139, 69, 19, 0.9);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+  }
+  .main-menu .navbar-toggle:hover {
+    background: rgba(139, 69, 19, 1);
+  }
+  .main-menu .navbar-toggle .icon-bar {
+    background: #ffffff;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  .main-menu .navbar-toggle:hover .icon-bar {
+    background: #FEB404;
+  }
+
+  /* Improved dropdown collapse area */
+  .main-menu .collapse {
+    background: linear-gradient(180deg, #8B4513 0%, #6B3410 100%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    max-height: 450px;
+    overflow-y: auto;
+  }
+
+  /* Improved dropdown button */
+  .mobile-menu .dropdown-btn {
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    width: 40px;
+    height: 35px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu .dropdown-btn:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  .mobile-menu .dropdown-btn:after {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  /* Transparent background for menu items */
+  .mobile-menu,
+  .mobile-menu > li > ul,
+  .mobile-menu > li > ul > li > ul,
+  .bounce-in-header .mobile-menu,
+  .bounce-in-header .mobile-menu > li > ul,
+  .bounce-in-header .mobile-menu > li > ul > li > ul {
+    background: transparent;
+  }
+
+  /* Submenu styling */
+  .mobile-menu > li > ul,
+  .mobile-menu > li > ul > li > ul {
+    background: rgba(0,0,0,0.15);
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+
+  /* Improved menu item links */
+  .mobile-menu > li > a,
+  .mobile-menu > li > ul > li > a,
+  .mobile-menu > li > ul > li > ul > li > a {
+    padding: 12px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 300ms ease 0s;
+    position: relative;
+  }
+
+  /* Hover effect with slide animation */
+  .mobile-menu > li > a:hover,
+  .mobile-menu > li > ul > li > a:hover,
+  .mobile-menu > li > ul > li > ul > li > a:hover {
+    color: #FEB404;
+    padding-left: 25px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Accent bar on hover */
+  .mobile-menu > li > a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: #FEB404;
+    border-radius: 0 3px 3px 0;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu > li > a:hover::before {
+    height: 70%;
+  }
+
+  /* Active/current menu item */
+  .mobile-menu > li.current > a {
+    color: #FEB404;
+    font-weight: 600;
+  }
+
+  /* Smooth submenu animation */
+  .mobile-menu > li > ul.show {
+    display: block !important;
+    animation: slideDown 0.3s ease;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Better spacing */
+  .main-menu {
+    padding-top: 10px;
+  }
+  .main-menu .navbar-collapse {
+    padding: 0;
+  }
+}
+
